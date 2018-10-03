@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'produk',
     'rest_framework_swagger',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -89,8 +90,25 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     )
-} 
+    ,
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     # uncomment to work with Swagger django docs
+    #     # and comment to work with our application if you get
+    #    # any error on `Authentication` related error
+    #     'rest_framework.authentication.BasicAuthentication',
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ),
 
+} 
+# SWAGGER_SETTINGS = {
+#     'SECURITY_DEFINITIONS': {
+#         'api_key': {
+#             'type': 'apiKey',
+#             'in': 'header',
+#             'name': 'Authorization'
+#         }
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
