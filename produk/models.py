@@ -23,7 +23,7 @@ class Kategori(models.Model):
 class Produk(models.Model):
     nama = models.CharField(max_length=125)
     merk = models.CharField(max_length=30, null=True, blank=True)
-    gambar = models.ImageField(blank=True, null=True)
+    gambar = models.ImageField(upload_to='post_image/',blank=True, null=True)
     harga = models.DecimalField(max_digits=15, decimal_places=2)
     qty = models.IntegerField(blank=True, default=0)
     kategori = models.ForeignKey('Kategori', on_delete=models.CASCADE)
