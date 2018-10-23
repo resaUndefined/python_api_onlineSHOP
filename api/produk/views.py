@@ -7,15 +7,15 @@ from api.permissions import IsAdminOrReadOnly
 
 
 class ProdukList(generics.ListCreateAPIView):
-	queryset = Produk.objects.all()
-	serializer_class = ProdukSerializer
-	permission_classes = (IsAdminOrReadOnly,)
-	filter_backends = (DjangoFilterBackend,)
-	filter_fields = ('kategori',)
+    queryset = Produk.objects.all()
+    serializer_class = ProdukSerializer
+    permission_classes = (IsAdminOrReadOnly,)
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('kategori',)
 
 
 class ProdukDetail(generics.RetrieveUpdateDestroyAPIView):
 
-	queryset = Produk.objects.all()
-	serializer_class = ProdukSerializer
-	permission_classes = (IsAdminOrReadOnly,)
+    queryset = Produk.objects.all()
+    serializer_class = ProdukSerializer
+    permission_classes = (IsAdminOrReadOnly,)
